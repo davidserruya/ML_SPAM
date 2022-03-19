@@ -4,6 +4,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 import re
+import pickle
+
+file = open('home_page_exemple.pkl', 'rb')
+text = pickle.load(file)
+text1 = pickle.load(file)
+text2 = pickle.load(file)
+file.close()
+
 
 # Affichage page principale
 st.markdown("<h1 style='text-align: center; color: red;'>Home Page<h1>", unsafe_allow_html=True)
@@ -48,7 +56,7 @@ Pour ce faire, nous allons utiliser la fonction suivante et montrer son fonction
 image = Image.open('clean.png')
 st.image(image)
 st.markdown("<u>Voici un exemple de mail présent dans le dataset :</u>", unsafe_allow_html=True)
-st.markdown("<i>"+dataset.text[0]+"</i>",unsafe_allow_html=True)
+st.markdown("<i>"+text+"</i>",unsafe_allow_html=True)
 
 
 
@@ -63,7 +71,7 @@ Il sont très fréquents et ralentissent notre travail.
 Afin de réduire d'avantage la taille des documents et de les uniformiser, nous enlevons également les majuscules, chiffres, carcatères spéciaux et les mots de petites tailles.
 """)
 
-st.markdown("<i>""</i>", unsafe_allow_html=True)
+st.markdown("<i>"+text1+"</i>", unsafe_allow_html=True)
 
 st.title("Lemmatisation & Stemming")
 
@@ -76,7 +84,7 @@ st.markdown(
 st.markdown("<u>Une fois ces processus réalisés, le mail se présente ainsi :</u>", unsafe_allow_html=True)
 
 
-st.markdown("<i>""</i>", unsafe_allow_html=True)
+st.markdown("<i>"+text2+"</i>", unsafe_allow_html=True)
 
 
 st.title("Vecteurs numériques")
