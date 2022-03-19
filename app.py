@@ -18,7 +18,7 @@ elif menu == 'Unsupervised Interface':
 elif menu == 'Supervised Interface':
     exec(open("supervised_interface.py").read())
 
-#elif menu == 'Semi-Supervised Interface':
+elif menu == 'Semi-Supervised Interface':
     #exec(open("semi_supervised_interface.py").read())
 
 elif menu == 'Spam Or Not ?':
