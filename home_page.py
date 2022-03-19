@@ -63,8 +63,7 @@ Il sont très fréquents et ralentissent notre travail.
 Afin de réduire d'avantage la taille des documents et de les uniformiser, nous enlevons également les majuscules, chiffres, carcatères spéciaux et les mots de petites tailles.
 """)
 
-st.markdown("<u>Après cette étape, le mail devient :</u>", unsafe_allow_html=True)
-st.markdown("<i>"+text1+"</i>", unsafe_allow_html=True)
+st.markdown("<i>""</i>", unsafe_allow_html=True)
 
 st.title("Lemmatisation & Stemming")
 
@@ -76,8 +75,8 @@ st.markdown(
 )
 st.markdown("<u>Une fois ces processus réalisés, le mail se présente ainsi :</u>", unsafe_allow_html=True)
 
-text2=lemmatisationStemming(text1)
-st.markdown("<i>"+text2+"</i>", unsafe_allow_html=True)
+
+st.markdown("<i>""</i>", unsafe_allow_html=True)
 
 
 st.title("Vecteurs numériques")
