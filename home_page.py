@@ -3,13 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
-from nltk.corpus import stopwords
-from nltk.stem.snowball import SnowballStemmer
-from nltk.stem import WordNetLemmatizer 
-stopwords = stopwords.words('english')
-stemmer = SnowballStemmer("english")
-lemmatizer = WordNetLemmatizer()
-from sklearn.feature_extraction.text import TfidfVectorizer
 import re
 
 # Affichage page principale
@@ -61,16 +54,6 @@ st.markdown("<i>"+dataset.text[0]+"</i>",unsafe_allow_html=True)
 
 st.title("Stopwords")
 
-def stopword(text):
-    new_text=text.lower()
-    clean_text=re.sub("[^a-z]+"," ",new_text)
-    clean_text_stopwords = ""
-    for i in clean_text.split(" ")[1:]:
-        if not i in stopwords and len(i) > 3:
-            clean_text_stopwords += i
-            clean_text_stopwords += " "
-    return clean_text_stopwords
-text1=stopword(dataset.text[0])
 
 st.markdown(
 """
@@ -84,16 +67,6 @@ st.markdown("<u>Après cette étape, le mail devient :</u>", unsafe_allow_html=T
 st.markdown("<i>"+text1+"</i>", unsafe_allow_html=True)
 
 st.title("Lemmatisation & Stemming")
-
-def lemmatisationStemming(text):
-    clean_text=text
-    clean_text_stopwords = ""
-    for i in clean_text.split(" "):
-            clean_word=lemmatizer.lemmatize(i)
-            clean_word=stemmer.stem(clean_word)
-            clean_text_stopwords += clean_word
-            clean_text_stopwords += " "
-    return clean_text_stopwords
 
 st.markdown(
 """
