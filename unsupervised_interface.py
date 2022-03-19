@@ -7,7 +7,7 @@ import streamlit as st
 st.markdown("<h1 style='text-align: center; color: red;'>UL INTERFACE</h1>", unsafe_allow_html=True)
 st.markdown(
 """
-En apprentissage non-supervisé, un algorithme reçoit un ensemble de données non-étiqueté sur lequel il va pouvoir s’entraîner et identifier des similaités afin de réaliser des regroupements.
+En apprentissage non-supervisé, un algorithme reçoit un ensemble de données non-étiquetées sur lequel il va pouvoir s’entraîner et identifier des similarités afin de réaliser des regroupements.
 
 """)
 st.markdown(
