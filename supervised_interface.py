@@ -1,7 +1,10 @@
-from supervised_algo import df_performance_metrics
 from PIL import Image
 import streamlit as st
+import pickle 
 
+file = open('metrics_supervised.pkl', 'rb')
+metrics_supervised= pickle.load(file)
+file.close()
 
 
 # Affichage page principale
@@ -29,4 +32,4 @@ Ensuite nous allons tester le modèle avec le set de test et pouvoir calculer la
 Ces indicateurs vont nous permettre de déterminer l'algorithme le plus efficace pour ce problème.
 """)
 st.write("")
-st.dataframe(df_performance_metrics)
+st.dataframe(metrics_supervised)
