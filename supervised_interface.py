@@ -11,7 +11,7 @@ file.close()
 st.markdown("<h1 style='text-align: center; color: red;'>SL INTERFACE</h1>", unsafe_allow_html=True)
 st.markdown(
 """
-En apprentissage supervisé, un algorithme reçoit un ensemble de données qui est étiqueté avec des valeurs de sorties correspondantes sur lequel il va pouvoir s’entraîner et définir un modèle de prédiction (training set). Cet algorithme pourra par la suite être utilisé sur de nouvelles données afin de prédire leurs valeurs de sorties correspondantes (testing set).
+En apprentissage supervisé, un algorithme reçoit un ensemble de données qui est étiquetées avec des valeurs de sorties correspondantes sur lequel il va pouvoir s’entraîner et définir un modèle de prédiction (training set). Cet algorithme pourra par la suite être utilisé sur de nouvelles données afin de prédire leurs valeurs de sorties correspondantes (testing set).
 
 """)
 st.markdown(
