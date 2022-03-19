@@ -12,7 +12,7 @@ st.markdown(
 Au travers d'un exemmple illustré, Ce site a pour objectif de déterminer si l'utilisation de l'apprentissage semi-supervisé se révéle être plus performant que celui de l'apprentissage supervisé et non-supervisé.
 """)
 
-dataset = pd.read_csv("spam_ham_dataset.csv")
+dataset = pd.read_csv("spam_clean.csv")
 shape=dataset.shape
 count_Class=pd.value_counts(dataset["label_num"], sort= True)
 labels = 'Not-Spam', 'Spam'
