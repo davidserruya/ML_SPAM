@@ -5,7 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 import pandas as pd
 import pickle
-
+import re
 import streamlit as st
 import pandas as pd
 import numpy as np
