@@ -40,6 +40,6 @@ if mail_text is not None:
            predicted= modelAC.predict(mail_text)
            resultat=predicted[0]
      if(resultat==0):
-          st.write("not spam)
+          st.write("not spam")
      elif(resultat==1):
-          st.write("not spam)           
+          st.write("not spam")           
