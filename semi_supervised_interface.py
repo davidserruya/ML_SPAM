@@ -1,4 +1,5 @@
 import streamlit as st
+import pickle
 from PIL import Image
 
 file = open('metrics_semi_supervised.pkl', 'rb')
