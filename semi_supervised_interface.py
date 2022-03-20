@@ -1,6 +1,9 @@
 import streamlit as st
 from PIL import Image
 
+file = open('metrics_semi_supervised.pkl', 'rb')
+metrics_semi_supervised= pickle.load(file)
+file.close()
 
 st.markdown("<h1 style='text-align: center; color: red;'>SSL INTERFACE</h1>", unsafe_allow_html=True)
 st.markdown(
@@ -22,4 +25,4 @@ Pour chaque algorithme, nous allons l'entraîner et lui permettre de trouver des
 Ensuite nous allons tester le modèle avec le set de test et pouvoir calculer la précision, le rappel et le taux de reconnaissance de chaque modèle.  
 Ces indicateurs vont nous permettre de déterminer l'algorithme le plus efficace pour ce problème.
 """)
-st.write("")
+st.dataframe(metrics_semi_supervised)
