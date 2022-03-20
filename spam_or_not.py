@@ -40,7 +40,8 @@ from sklearn.metrics import confusion_matrix,precision_score, recall_score, f1_s
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import AgglomerativeClustering
 import pickle
-import nltk as nl
+import nltk 
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 from nltk.stem import WordNetLemmatizer 
