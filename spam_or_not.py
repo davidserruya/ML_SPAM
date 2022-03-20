@@ -84,24 +84,23 @@ option = st.sidebar.selectbox(
 # Fin affichage barre latérale
 
 if mail_text is not None:
-     mail_text=tfidf.transform(clean_text(mail_text))
      if(option=='SVM'):
-           predicted= modelSVM.predict(mail_text)
+           predicted= modelSVM.predict(tfidf.transform(clean_text(mail_text)))
            resultat=predicted[0]
      elif(option=='Naive Bayes'):
-           predicted= modelNB.predict(mail_text)
+           predicted= modelNB.predict(tfidf.transform(clean_text(mail_text)))
            resultat=predicted[0]
      elif(option=='KNN'): 
-           predicted= modelKNN.predict(mail_text)
+           predicted= modelKNN.predict(tfidf.transform(clean_text(mail_text)))
            resultat=predicted[0]
      elif(option=='MiniBatchKmeans'):
-           predicted= modelKM1.predict(mail_text)
+           predicted= modelKM1.predict(tfidf.transform(clean_text(mail_text)))
            resultat=predicted[0]
      elif(option=='Kmeans'):
-           predicted= modelKM2.predict(mail_text)
+           predicted= modelKM2.predict(tfidf.transform(clean_text(mail_text)))
            resultat=predicted[0]
      elif(option=='AC'):
-           predicted= modelAC.predict(mail_text)
+           predicted= modelAC.predict(tfidf.transform(clean_text(mail_text)))
            resultat=predicted[0]
      if(resultat==0):
           st.write("not spam")
