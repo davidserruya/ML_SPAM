@@ -86,6 +86,7 @@ if mail_text is not None:
      st.write("caca")
      st.write(mail_text)
      tableau_text.append(clean_text(mail_text))
+     st.write(tableau_text[0])
      if(option=='SVM'):
            predicted= modelSVM.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
