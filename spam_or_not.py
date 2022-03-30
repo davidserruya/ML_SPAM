@@ -83,6 +83,8 @@ option = st.sidebar.selectbox(
 # Fin affichage barre latérale
 
 if mail_text is not None:
+     st.write("caca")
+     st.write(mail_text)
      tableau_text.append(clean_text(mail_text))
      if(option=='SVM'):
            predicted= modelSVM.predict(tfidf.transform(tableau_text))
@@ -96,4 +98,5 @@ if mail_text is not None:
      if(resultat==0):
           st.write("not spam")
      elif(resultat==1):
-          st.write("Spam")           
+          st.write("Spam")  
+     tableau_text=[]
