@@ -57,9 +57,8 @@ file.close()
 modelSVM=table[0]
 modelNB=table[1]
 modelKNN=table[2]
-modelKM1=table[3]
-modelKM2=table[4]
-modelAC=table[5]
+tfidf=table[3]
+tableau_text=[]
 
 def clean_text(text):
     new_text=text.lower()
@@ -80,29 +79,21 @@ st.sidebar.markdown("<h1 style='text-align: center; color: red;'>MAIL MENU</h1>"
 mail_text = st.sidebar.text_area("Entrez le contenu texte de votre mail :")
 option = st.sidebar.selectbox(
      'Quel algorithme choisissez-vous ?',
-     ('SVM', 'Naive Bayes', 'KNN','MiniBatchKmeans','Kmeans','AC'))
+     ('SVM', 'Naive Bayes', 'KNN'))
 # Fin affichage barre latérale
 
 if mail_text is not None:
+     tableau_text.append(clean_text(mail_text))
      if(option=='SVM'):
-           predicted= modelSVM.predict(tfidf.transform(clean_text(mail_text)))
+           predicted= modelSVM.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
      elif(option=='Naive Bayes'):
-           predicted= modelNB.predict(tfidf.transform(clean_text(mail_text)))
+           predicted= modelNB.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
      elif(option=='KNN'): 
-           predicted= modelKNN.predict(tfidf.transform(clean_text(mail_text)))
-           resultat=predicted[0]
-     elif(option=='MiniBatchKmeans'):
-           predicted= modelKM1.predict(tfidf.transform(clean_text(mail_text)))
-           resultat=predicted[0]
-     elif(option=='Kmeans'):
-           predicted= modelKM2.predict(tfidf.transform(clean_text(mail_text)))
-           resultat=predicted[0]
-     elif(option=='AC'):
-           predicted= modelAC.predict(tfidf.transform(clean_text(mail_text)))
+           predicted= modelKNN.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
      if(resultat==0):
           st.write("not spam")
      elif(resultat==1):
-          st.write("not spam")           
+          st.write("Spam")           
