@@ -70,10 +70,10 @@ if button:
            resultat=predicted[0]
      if(resultat==0):
          image = Image.open('notspam.png')
-         col1, col2, col3 = st.columns([0.1, 0.8, 0.1])
+         col1, col2, col3 = st.columns([0.1, 3, 0.1])
          col2.image([image])
      elif(resultat==1):
          image = Image.open('spam.png')
-         col1, col2, col3 = st.columns([0.2, 1, 0.2])
+         col1, col2, col3 = st.columns([0.2, 3, 0.2])
          col2.image([image])
      tableau_text=[]
