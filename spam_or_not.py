@@ -50,7 +50,7 @@ button = st.sidebar.button("Lancer")
 # Fin affichage barre latérale
 
 if button:
-     st.write(mail_text)
+     st.write("voici le mail que vous cherchez à examiner : " + mail_text)
      tableau_text.append(clean_text(mail_text))
      if(option=='SVM'):
            predicted= modelSVM.predict(tfidf.transform(tableau_text))
@@ -62,7 +62,7 @@ if button:
            predicted= modelKNN.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
      if(resultat==0):
-          st.write("not spam")
+          st.write("Not-Spam")
      elif(resultat==1):
           st.write("Spam")  
      tableau_text=[]
