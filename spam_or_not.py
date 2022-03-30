@@ -1,4 +1,5 @@
 import pickle
+import Image
 from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.neighbors import KNeighborsClassifier
@@ -50,19 +51,27 @@ button = st.sidebar.button("Lancer")
 # Fin affichage barre latérale
 
 if button:
-     st.write("voici le mail que vous cherchez à examiner : " + mail_text)
+     st.write("Voici, le mail que vous cherchez à examiner : " + mail_text)
      tableau_text.append(clean_text(mail_text))
      if(option=='SVM'):
+           st.write("Pour déterminer la nature du mail, vous avez choisi l'algorithme Machine à vecteurs de support (SVM).")
+           st.write("D'après SVM, votre mail est :")
            predicted= modelSVM.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
      elif(option=='Naive Bayes'):
+           st.write("Pour déterminer la nature du mail, vous avez choisi la classification naïve bayésienne(NB).")
+           st.write("D'après NB, votre mail est :")
            predicted= modelNB.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
      elif(option=='KNN'): 
+           st.write("Pour déterminer la nature du mail, vous avez choisi l'algorithme des K plus proches voisins (KNN).")
+           st.write("D'après KNN, votre mail est :")
            predicted= modelKNN.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
      if(resultat==0):
-          st.write("Not-Spam")
+         image = Image.open('notspam.png')
+         st.image(image)
      elif(resultat==1):
-          st.write("Spam")  
+         image = Image.open('spam.png')
+         st.image(image)
      tableau_text=[]
