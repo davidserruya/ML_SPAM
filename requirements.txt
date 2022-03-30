@@ -11,3 +11,4 @@ nltk==3.5
 sklearn==0.0
 streamlit==1.5
 streamlit-option-menu==0.2.10
+click==8.0
