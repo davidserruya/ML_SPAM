@@ -1,5 +1,5 @@
 import pickle
-import Image
+from PIL import Image
 from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.neighbors import KNeighborsClassifier
