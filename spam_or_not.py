@@ -90,12 +90,15 @@ if mail_text is not None:
      if(option=='SVM'):
            predicted= modelSVM.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
+           st.write(1)
      elif(option=='Naive Bayes'):
            predicted= modelNB.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
+           st.write(2)
      elif(option=='KNN'): 
            predicted= modelKNN.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
+           st.write(3)
      if(resultat==0):
           st.write("not spam")
      elif(resultat==1):
