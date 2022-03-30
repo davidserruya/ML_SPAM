@@ -80,9 +80,10 @@ mail_text = st.sidebar.text_area("Entrez le contenu texte de votre mail :")
 option = st.sidebar.selectbox(
      'Quel algorithme choisissez-vous ?',
      ('SVM', 'Naive Bayes', 'KNN'))
+button = st.sidebar.button("Lancer")
 # Fin affichage barre latérale
 
-if mail_text is not None:
+if button:
      st.write("caca")
      st.write(mail_text)
      tableau_text.append(clean_text(mail_text))
