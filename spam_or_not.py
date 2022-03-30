@@ -1,45 +1,10 @@
-from sklearn.datasets import fetch_openml
-import numpy as np
 import pickle
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score
-import pandas as pd
-import pickle
-import re
-import streamlit as st
-import pandas as pd
-import numpy as np
-pd.options.mode.chained_assignment = None
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.semi_supervised import SelfTrainingClassifier
-from sklearn.svm import SVC
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix,precision_score, recall_score, f1_score, accuracy_score
-from sklearn.semi_supervised import LabelSpreading
-from sklearn.semi_supervised import LabelPropagation
-from sklearn.model_selection import GridSearchCV
-import pickle
-import pandas as pd 
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import plot_confusion_matrix
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix,precision_score, recall_score, f1_score, accuracy_score
 from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
-import pickle
+import streamlit as st
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.cluster import KMeans
-from sklearn.cluster import MiniBatchKMeans
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import plot_confusion_matrix
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix,precision_score, recall_score, f1_score, accuracy_score
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.cluster import AgglomerativeClustering
-import pickle
 import nltk 
 nltk.download('stopwords')
 from nltk.corpus import stopwords
@@ -84,22 +49,17 @@ button = st.sidebar.button("Lancer")
 # Fin affichage barre latérale
 
 if button:
-     st.write("caca")
      st.write(mail_text)
      tableau_text.append(clean_text(mail_text))
-     st.write(tableau_text[0])
      if(option=='SVM'):
            predicted= modelSVM.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
-           st.write(1)
      elif(option=='Naive Bayes'):
            predicted= modelNB.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
-           st.write(2)
      elif(option=='KNN'): 
            predicted= modelKNN.predict(tfidf.transform(tableau_text))
            resultat=predicted[0]
-           st.write(3)
      if(resultat==0):
           st.write("not spam")
      elif(resultat==1):
