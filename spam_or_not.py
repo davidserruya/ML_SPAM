@@ -49,7 +49,7 @@ tfidf = TfidfVectorizer(stop_words='english')
 stopwords = stopwords.words('english')
 stemmer = SnowballStemmer("english")
 lemmatizer = WordNetLemmatizer()
-
+nltk.download('wordnet')
 
 file = open('models.pkl', 'rb')
 table= pickle.load(file)
