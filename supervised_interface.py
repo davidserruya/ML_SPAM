@@ -27,8 +27,8 @@ st.image(image)
 st.markdown(
 """
 Dans notre cas, notre dataset est composé de mails qui pour certains sont des spams. Nous allons répartir notre dataset en 80% d'entrainement et 20% de test.    
-Pour chaque algorithme, nous allons l'entraîner et lui permettre de définir un modèle de prédiction grâce au jeu d'entraînement.
-Ensuite nous allons tester le modèle avec le set de test et pouvoir calculer la précision, le rappel et le taux de reconnaissance de chaque modèle.  
+Pour chaque algorithme, nous allons l'entraîner et lui permettre de définir un modèle de prédiction grâce au jeu d'entraînement (training set).
+Ensuite nous allons tester le modèle avec le jeu de test (test set) et pouvoir calculer la précision, le rappel et le taux de reconnaissance de chaque modèle.  
 Ces indicateurs vont nous permettre de déterminer l'algorithme le plus efficace pour ce problème.
 """)
 st.write("")
