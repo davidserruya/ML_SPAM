@@ -15,7 +15,7 @@ st.markdown(
 """
 Pour notre étude, nous avons choisi trois algorithmes différents:
 * Self Training Classifier : est basé sur l'algorithme de Yarowsky. En utilisant cet algorithme, un classificateur supervisé donné peut fonctionner comme un classificateur semi-supervisé et prédit des étiquettes pour les échantillons non étiquetés et ajoute un sous-ensemble de ces étiquettes à l'ensemble de données étiquetées.
-* Label Propagation & Label Spreading : fonctionnent en construisant un graphique de similarité sur tous les éléments de l'ensemble de données d'entrée. Ils diffèrent par les modifications apportées à la matrice de similarité représentée graphiquement et par l'effet de serrage sur les distributions d'étiquettes.
+* Label Propagation & Label Spreading : fonctionnent en construisant un graphique de similarité sur tous les éléments de l'ensemble de données d'entrée. Ils diffèrent par les modifications apportées à la matrice de similarité et par l'effet de serrage sur les distributions d'étiquettes.
 """)
 image = Image.open('semisup.png')
 st.image(image)
