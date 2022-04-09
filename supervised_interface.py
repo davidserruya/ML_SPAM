@@ -11,14 +11,14 @@ file.close()
 st.markdown("<h1 style='text-align: center; color: red;'>SL INTERFACE</h1>", unsafe_allow_html=True)
 st.markdown(
 """
-En apprentissage supervisé, un algorithme reçoit un ensemble de données qui est étiquetées avec des valeurs de sorties correspondantes sur lequel il va pouvoir s’entraîner et définir un modèle de prédiction (training set). Cet algorithme pourra par la suite être utilisé sur de nouvelles données afin de prédire leurs valeurs de sorties correspondantes (testing set).
+En apprentissage supervisé, un algorithme reçoit un ensemble de données étiquetées sur lequel il va pouvoir s’entraîner et définir un modèle de prédiction. Cet algorithme pourra par la suite être utilisé sur de nouvelles données afin de prédire leurs valeurs de sorties correspondantes.
 
 """)
 st.markdown(
 """
 Pour notre étude, nous avons choisi trois algorithmes différents:
-* Machine à vecteurs de support (SVM) : est décrit géométriquement comme un hyperplan qui sépare de façon optimale le document en deux groupes de données, d’un côté l’opinion positive (spam) et de l’autre l’opinion négative (non spam).
-* Classificatio naïve bayésienne : est une méthode de classification statistique qui peut être utilisée pour prédire la probabilité d'appartenance à une classe, dans notre cas il existe deux classes : spam ou non-spam.
+* Machine à vecteurs de support (SVM) : est décrit géométriquement comme un hyperplan qui sépare de façon optimale le document en deux groupes de données, d’un côté l’opinion positive (Spam) et de l’autre l’opinion négative (Non-Spam).
+* Classification naïve bayésienne (Naive Bayes) : est une méthode de classification statistique qui peut être utilisée pour prédire la probabilité d'appartenance à une classe, dans notre cas il existe deux classes : Spam ou Non-Spam.
 * K plus proches voisins (KNN) : suppose que des objets similaires existent à proximité dans cet espace (plus proches voisins).  En d'autres termes, des choses similaires sont proches les unes des autres. 
 
 """)
