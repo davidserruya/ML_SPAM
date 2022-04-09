@@ -15,9 +15,10 @@ En apprentissage non-supervisé, un algorithme reçoit un ensemble de données n
 """)
 st.markdown(
 """
-Pour notre étude, nous avons choisi deux algorithmes différents:
-* K-moyennes (Kmeans) : est est une méthode de quantification vectorielle , issue du traitement du signal , qui vise à partitionner n observations en k clusters dans lesquels chaque observation appartient au cluster dont la moyenne est la plus proche.
-* Regroupement hiérarchique : est une méthode avce deux approches possibles, ascendante et descendante. 
+Pour notre étude, nous avons choisi trois algorithmes différents:
+* K-moyennes (K-means) : est une méthode de quantification vectorielle , issue du traitement du signal , qui vise à partitionner n observations en k clusters dans lesquels chaque observation appartient au cluster dont la moyenne est la plus proche.
+* Mini Batch K-means : est une alternative à l'algorithme de k-means. Son avantage est de réduire le coût de calcul en n'utilisant pas l'ensemble des données à chaque itération mais un sous-échantillon de taille fixe.
+* Agglomerative Clustering (AC) : effectue un regroupement hiérarchique en utilisant une approche ascendante. Chaque observation commence dans son propre cluster, et les clusters sont successivement fusionnés.
 """)
 image = Image.open('unsup.png')
 st.image(image)
