@@ -17,7 +17,7 @@ file.close()
 st.markdown("<h1 style='text-align: center; color: red;'>Home Page<h1>", unsafe_allow_html=True)
 st.markdown(
 """
-Au travers d'un exemmple illustré, Ce site a pour objectif de déterminer si l'utilisation de l'apprentissage semi-supervisé se révéle être plus performant que celui de l'apprentissage supervisé et non-supervisé.
+Au travers d'un exemple illustré, Ce site a pour objectif de déterminer si l'utilisation de l'apprentissage semi-supervisé se révéle être plus performant que celui de l'apprentissage supervisé et non-supervisé.
 """)
 
 dataset = pd.read_csv("spam_clean.csv")
